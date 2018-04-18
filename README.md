@@ -1,7 +1,7 @@
 # [WIP] iOS Components
 
 This repo includes useful helper classes and components with origanized file structure.
-I persinally use them for my production apps in the Apple Store.
+I persinally use them for my production.
 - [x] Initial Realm, Admob, StoreKit (In-App-Purchase), App Rate setup
 - [x] Various handy methods
 
