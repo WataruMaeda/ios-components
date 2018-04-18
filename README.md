@@ -1,4 +1,4 @@
-# [WIP] iOS Components
+# iOS Components
 
 This repo includes useful helper classes and components with origanized file structure.
 I persinally use them for my production.
@@ -18,4 +18,23 @@ pod 'SwiftRater'
 3. Add setup in the `application: didFinishLaunchingWithOptions` function. It's in `AppDelegate.swift`.
 ```
 SetupUtil.setup()
+```
+
+# Others
+
+- Access camera & photo library ({your-project-name}-Info.plist)
+
+```
+<key>NSCameraUsageDescription</key>
+<string>You will be able to take photo and video with camera.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>You will be able to take video with sound.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>You will be able to select images from Photo library.</string>
+```
+
+- Update app name (InfoPlist.strings)
+
+```
+"CFBundleDisplayName" = "{your-app-name}";
 ```
