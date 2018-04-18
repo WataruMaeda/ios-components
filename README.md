@@ -7,7 +7,7 @@ I persinally use them for my production.
 
 # How to use
 
-1. Drag & drop the [classes](https://github.com/WataruMaeda/ios-components/tree/master/Classes), (assets, supporting files) to your project.
+1. Drag & drop the [classes](https://github.com/WataruMaeda/ios-components/tree/master/classes), (assets, supporting files) to your project.
 2. Create `Podfile` and install the libraries.
 ```
 pod 'RealmSwift'
@@ -38,3 +38,8 @@ SetupUtil.setup()
 ```
 "CFBundleDisplayName" = "{your-app-name}";
 ```
+
+
+# License
+
+This project is available under the MIT license. See the [LICENSE](https://github.com/WataruMaeda/ios-components/blob/master/LICENSE) file for more info.
