@@ -12,7 +12,6 @@ class TabbarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViewControllers()
-    initViews()
     setupTheme()
   }
 }
@@ -21,25 +20,25 @@ class TabbarController: UITabBarController {
 
 extension TabbarController {
   
-  fileprivate func initViews() {
+  fileprivate func setupViewControllers() {
     
     delegate = self
-    
-    // tab image tint color can be changed
-    for tbi in tabBar.items! {
-      tbi.image = tbi.image?.withRenderingMode(.alwaysOriginal)
-    }
-  }
-  
-  fileprivate func setupViewControllers() {
     
     // init view controllers
     let viewController1 = UIViewController()
     let viewController2 = UIViewController()
     
     // setting tab items
-    viewController1.tabBarItem = UITabBarItem(title: "Controller 1", image: nil, tag: 0)
-    viewController1.tabBarItem = UITabBarItem(title: "Controller 2", image: nil, tag: 1)
+    viewController1.tabBarItem = UITabBarItem(
+      title: "Home",
+      image: UIImage().withRenderingMode(.alwaysTemplate),
+      tag: 0
+    )
+    viewController2.tabBarItem = UITabBarItem(
+      title: "Timeline",
+      image: UIImage().withRenderingMode(.alwaysTemplate),
+      tag: 1
+    )
     
     // wrap with navigation controller
     let navigationContoller1 = NavigationController(rootViewController: viewController1)
@@ -53,17 +52,18 @@ extension TabbarController {
   
   fileprivate func setupTheme() {
     
-    // selected icon tint color
-    UITabBar.appearance().tintColor = UIColor.keyColor
+    // background color
+    tabBar.barTintColor = .white
     
-    // tabbar item ScreenTitle color
-    UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.keyColor], for:.normal)
+    // icon tint color
+    tabBar.tintColor = .black
     
-    // tabbar item ScreenTitle selected color
-    UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.keyColor], for:.selected)
+    // title color
+    tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.keyColor], for:.normal)
+    tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.black], for:.selected)
     
     // selected background color
-    UITabBar.appearance().selectionIndicatorImage = UIImage()
+    tabBar.selectionIndicatorImage = UIImage()
   }
 }
 
